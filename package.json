@@ -1,17 +1,17 @@
 {
-  "name": "appliedgraphs-github-io",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
   "dependencies": {
     "astro": "^5.0.3"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4"
-  }
+  },
+  "name": "appliedgraphs-github-io",
+  "scripts": {
+    "astro": "astro",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "type": "module",
+  "version": "0.0.1"
 }

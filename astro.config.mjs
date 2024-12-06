@@ -7,6 +7,6 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react()],
-  site: "https://appliedgraphs.github.io",
+	integrations: [tailwind(), react()],
+	site: "https://appliedgraphs.github.io",
 });

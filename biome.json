@@ -20,6 +20,11 @@
 		"enabled": true,
 		"indentStyle": "tab"
 	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double"
+		}
+	},
 	"organizeImports": {
 		"enabled": true
 	},
@@ -30,11 +35,6 @@
 			"suspicious": {
 				"noExplicitAny": "off"
 			}
-		}
-	},
-	"javascript": {
-		"formatter": {
-			"quoteStyle": "double"
 		}
 	}
 }

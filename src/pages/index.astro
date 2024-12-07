@@ -1,27 +1,14 @@
 ---
-import { getEntry } from "astro:content";
 import ImageMod from "@/components/ImageMod.astro";
 import Base from "@/layouts/Base.astro";
-import { markdownify } from "@/lib/utils/textConverter";
-import CallToAction from "@/partials/CallToAction.astro";
-import Testimonial from "@/partials/Testimonial.astro";
-import type { Button, Feature } from "@/types";
+import { markdownify } from "@/lib/utilities";
+// import CallToAction from "@/partials/CallToAction.astro";
+// import Testimonial from "@/partials/Testimonial.astro";
+// import type { Button, Feature } from "@/types";
 import { FaCheck } from "react-icons/fa";
+import * as data from "./_index.md";
 
-interface Homepage {
-	banner: {
-		title: string;
-		content: string;
-		image: string;
-		button: Button;
-	};
-	features: Feature[];
-}
-
-const homepage = await getEntry("homepage", "-index");
-const testimonial = await getEntry("sections", "testimonial");
-const call_to_action = await getEntry("sections", "call-to-action");
-const { banner, features }: Homepage = homepage.data;
+const { banner, features } = data.frontmatter;
 ---
 
 <Base>
@@ -108,7 +95,6 @@ const { banner, features }: Homepage = homepage.data;
     ))
   }
   <!-- /Features -->
-
-  <Testimonial testimonial={testimonial} />
-  <CallToAction call_to_action={call_to_action} />
+  <!-- <Testimonial testimonial={testimonial} />
+  <CallToAction call_to_action={call_to_action} /> -->
 </Base>

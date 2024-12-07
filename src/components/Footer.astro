@@ -1,11 +1,11 @@
 ---
 import Logo from "@/components/Logo.astro";
-import { markdownify } from "@/lib/utilities";
 // import Social from "@/components/Social.astro";
 // import config from "@/config/config.json";
 // import menu from "@/config/menu.json";
 // import social from "@/config/social.json";
-import site from "@/site.json";
+import siteConfig from "@/config/site.json";
+import { markdownify } from "@/lib/utilities";
 
 // const { footer }: { footer: { name: string; url: string }[] } = menu;
 ---
@@ -34,7 +34,7 @@ import site from "@/site.json";
   </div>
   <div class="border-t border-border py-7 dark:border-darkmode-border">
     <div class="container text-center text-light dark:text-darkmode-light">
-      <p set:html={markdownify(site.copyright)} />
+      <p set:html={markdownify(siteConfig.copyright)} />
     </div>
   </div>
 </footer>

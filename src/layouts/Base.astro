@@ -1,11 +1,11 @@
 ---
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
+import theme from "@/config/theme.json";
 import { plainify } from "@/lib/utilities";
-import theme from "@/theme.json";
 import "@/styles/main.scss";
 import { ClientRouter } from "astro:transitions";
-import site from "@/site.json";
+import siteConfig from "@/config/site.json";
 import { AstroFont } from "astro-font";
 
 // font families
@@ -44,7 +44,7 @@ const { title, meta_title, description, image, noindex, canonical } =
 <html lang="en">
   <head>
     <!-- favicon -->
-    <link rel="shortcut icon" href={site.favicon} />
+    <link rel="shortcut icon" href={siteConfig.favicon} />
     <!-- theme meta -->
     <meta name="theme-name" content="astroplate" />
     <meta name="msapplication-TileColor" content="#000000" />
@@ -93,7 +93,7 @@ const { title, meta_title, description, image, noindex, canonical } =
 
     <!-- title -->
     <title>
-      {plainify(meta_title ? meta_title : title ? title : site.title)}
+      {plainify(meta_title ? meta_title : title ? title : siteConfig.title)}
     </title>
 
     <!-- canonical url -->
@@ -105,34 +105,40 @@ const { title, meta_title, description, image, noindex, canonical } =
     <!-- meta-description -->
     <meta
       name="description"
-      content={plainify(description ? description : site.meta.description)}
+      content={plainify(
+        description ? description : siteConfig.meta.description,
+      )}
     />
 
     <ClientRouter />
 
-    <meta name="author" content={site.meta.author} />
+    <meta name="author" content={siteConfig.meta.author} />
 
     <!-- og-title -->
     <meta
       property="og:title"
-      content={plainify(meta_title ? meta_title : title ? title : site.title)}
+      content={plainify(
+        meta_title ? meta_title : title ? title : siteConfig.title,
+      )}
     />
 
     <!-- og-description -->
     <meta
       property="og:description"
-      content={plainify(description ? description : site.meta.description)}
+      content={plainify(
+        description ? description : siteConfig.meta.description,
+      )}
     />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content={`${site.baseUrl}/${Astro.url.pathname.replace("/", "")}`}
+      content={`${siteConfig.baseUrl}/${Astro.url.pathname.replace("/", "")}`}
     />
 
     <!-- og-image -->
     <meta
       property="og:image"
-      content={`${site.baseUrl}${image ? image : site.meta.image}`}
+      content={`${siteConfig.baseUrl}${image ? image : siteConfig.meta.image}`}
     />
   </head>
   <body>

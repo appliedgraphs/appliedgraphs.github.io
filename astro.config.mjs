@@ -1,4 +1,4 @@
-import site from "./src/site.json";
+import siteConfig from "./src/config/site.json";
 
 // @ts-check
 import { defineConfig } from "astro/config";
@@ -8,7 +8,7 @@ import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 
 export default defineConfig({
-	base: site.basePath,
+	base: siteConfig.basePath,
 	integrations: [tailwind(), react()],
-	site: site.baseUrl,
+	siteConfig: siteConfig.baseUrl,
 });

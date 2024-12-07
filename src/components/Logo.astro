@@ -1,0 +1,21 @@
+---
+import config from "@/config.json";
+import ImageMod from "./ImageMod.astro";
+
+const logo = config.site.logo;
+---
+
+<a href="/" class="navbar-brand inline-block">
+  <ImageMod
+    src={logo.src}
+    class="inline-block"
+    width={logo.width * 2}
+    height={logo.height * 2}
+    alt={logo.alt}
+    style={{
+      height: logo.height,
+      width: logo.width,
+    }}
+    format="webp"
+  />
+</a>

@@ -1,0 +1,68 @@
+---
+import Logo from "@/components/Logo.astro";
+
+const navigationLinks: readonly {
+	href: string;
+	text: string;
+}[] = [
+	{
+		href: "/services",
+		text: "Services",
+	},
+	{
+		href: "/blog",
+		text: "Blog",
+	},
+];
+
+const { pathname } = Astro.url;
+---
+
+<header class="header z-30 sticky top-0">
+  <nav class="navbar container">
+    <!-- logo -->
+    <div class="order-0">
+      <Logo />
+    </div>
+    <!-- navbar toggler -->
+    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <label
+      for="nav-toggle"
+      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1"
+    >
+      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+        <title>Menu Open</title>
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+      </svg>
+      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+        <title>Menu Close</title>
+        <polygon
+          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+          transform="rotate(45 10 10)"></polygon>
+      </svg>
+    </label>
+    <!-- /navbar toggler -->
+    <ul
+      id="nav-menu"
+      class="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8"
+    >
+      {
+        navigationLinks.map((navigationLink) => (
+          <>
+              <li class="nav-item">
+                <a
+                  href={navigationLink.href}
+                  class={`nav-link block ${
+                    (pathname === `${navigationLink.href}/` || pathname === navigationLink.href) &&
+                    "active"
+                  }`}
+                >
+                  {navigationLink.text}
+                </a>
+              </li>
+          </>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

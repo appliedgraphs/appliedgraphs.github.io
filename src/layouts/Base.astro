@@ -15,29 +15,29 @@ const sf = theme.fonts.font_family.secondary;
 let fontPrimary: string;
 let fontSecondary: string;
 if (theme.fonts.font_family.primary) {
-	fontPrimary = theme.fonts.font_family.primary
-		.replace(/\+/g, " ")
-		.replace(/:[ital,]*[ital@]*[wght@]*[0-9,;.]+/gi, "");
+  fontPrimary = theme.fonts.font_family.primary
+    .replace(/\+/g, " ")
+    .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;.]+/gi, "");
 }
 if (theme.fonts.font_family.secondary) {
-	fontSecondary = theme.fonts.font_family.secondary
-		.replace(/\+/g, " ")
-		.replace(/:[ital,]*[ital@]*[wght@]*[0-9,;.]+/gi, "");
+  fontSecondary = theme.fonts.font_family.secondary
+    .replace(/\+/g, " ")
+    .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;.]+/gi, "");
 }
 
 // types for frontmatters
 export interface Props {
-	title?: string;
-	meta_title?: string;
-	description?: string;
-	image?: string;
-	noindex?: boolean;
-	canonical?: string;
+  title?: string;
+  meta_title?: string;
+  description?: string;
+  image?: string;
+  noindex?: boolean;
+  canonical?: string;
 }
 
 // destructure frontmatter
 const { title, meta_title, description, image, noindex, canonical } =
-	Astro.props;
+  Astro.props;
 ---
 
 <!doctype html>
@@ -105,9 +105,7 @@ const { title, meta_title, description, image, noindex, canonical } =
     <!-- meta-description -->
     <meta
       name="description"
-      content={plainify(
-        description ? description : site.meta.description
-      )}
+      content={plainify(description ? description : site.meta.description)}
     />
 
     <ClientRouter />
@@ -117,17 +115,13 @@ const { title, meta_title, description, image, noindex, canonical } =
     <!-- og-title -->
     <meta
       property="og:title"
-      content={plainify(
-        meta_title ? meta_title : title ? title : site.title
-      )}
+      content={plainify(meta_title ? meta_title : title ? title : site.title)}
     />
 
     <!-- og-description -->
     <meta
       property="og:description"
-      content={plainify(
-        description ? description : site.meta.description
-      )}
+      content={plainify(description ? description : site.meta.description)}
     />
     <meta property="og:type" content="website" />
     <meta
@@ -138,9 +132,7 @@ const { title, meta_title, description, image, noindex, canonical } =
     <!-- og-image -->
     <meta
       property="og:image"
-      content={`${site.baseUrl}${
-        image ? image : site.meta.image
-      }`}
+      content={`${site.baseUrl}${image ? image : site.meta.image}`}
     />
   </head>
   <body>

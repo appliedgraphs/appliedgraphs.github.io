@@ -2,17 +2,17 @@
 import Logo from "@/components/Logo.astro";
 
 const navigationLinks: readonly {
-	href: string;
-	text: string;
+  href: string;
+  text: string;
 }[] = [
-	{
-		href: "/services",
-		text: "Services",
-	},
-	{
-		href: "/blog",
-		text: "Blog",
-	},
+  {
+    href: "/services",
+    text: "Services",
+  },
+  {
+    href: "/blog",
+    text: "Blog",
+  },
 ];
 
 const { pathname } = Astro.url;
@@ -49,17 +49,18 @@ const { pathname } = Astro.url;
       {
         navigationLinks.map((navigationLink) => (
           <>
-              <li class="nav-item">
-                <a
-                  href={navigationLink.href}
-                  class={`nav-link block ${
-                    (pathname === `${navigationLink.href}/` || pathname === navigationLink.href) &&
-                    "active"
-                  }`}
-                >
-                  {navigationLink.text}
-                </a>
-              </li>
+            <li class="nav-item">
+              <a
+                href={navigationLink.href}
+                class={`nav-link block ${
+                  (pathname === `${navigationLink.href}/` ||
+                    pathname === navigationLink.href) &&
+                  "active"
+                }`}
+              >
+                {navigationLink.text}
+              </a>
+            </li>
           </>
         ))
       }

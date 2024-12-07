@@ -5,7 +5,7 @@ import { plainify } from "@/lib/utilities";
 import theme from "@/theme.json";
 import "@/styles/main.scss";
 import { ClientRouter } from "astro:transitions";
-import config from "@/config.json";
+import site from "@/site.json";
 import { AstroFont } from "astro-font";
 
 // font families
@@ -44,7 +44,7 @@ const { title, meta_title, description, image, noindex, canonical } =
 <html lang="en">
   <head>
     <!-- favicon -->
-    <link rel="shortcut icon" href={config.site.favicon} />
+    <link rel="shortcut icon" href={site.favicon} />
     <!-- theme meta -->
     <meta name="theme-name" content="astroplate" />
     <meta name="msapplication-TileColor" content="#000000" />
@@ -93,7 +93,7 @@ const { title, meta_title, description, image, noindex, canonical } =
 
     <!-- title -->
     <title>
-      {plainify(meta_title ? meta_title : title ? title : config.site.title)}
+      {plainify(meta_title ? meta_title : title ? title : site.title)}
     </title>
 
     <!-- canonical url -->
@@ -106,20 +106,19 @@ const { title, meta_title, description, image, noindex, canonical } =
     <meta
       name="description"
       content={plainify(
-        description ? description : config.metadata.meta_description
+        description ? description : site.meta.description
       )}
     />
 
     <ClientRouter />
 
-    <!-- author from config.json -->
-    <meta name="author" content={config.metadata.meta_author} />
+    <meta name="author" content={site.meta.author} />
 
     <!-- og-title -->
     <meta
       property="og:title"
       content={plainify(
-        meta_title ? meta_title : title ? title : config.site.title
+        meta_title ? meta_title : title ? title : site.title
       )}
     />
 
@@ -127,47 +126,22 @@ const { title, meta_title, description, image, noindex, canonical } =
     <meta
       property="og:description"
       content={plainify(
-        description ? description : config.metadata.meta_description
+        description ? description : site.meta.description
       )}
     />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content={`${config.site.base_url}/${Astro.url.pathname.replace("/", "")}`}
-    />
-
-    <!-- twitter-title -->
-    <meta
-      name="twitter:title"
-      content={plainify(
-        meta_title ? meta_title : title ? title : config.site.title
-      )}
-    />
-
-    <!-- twitter-description -->
-    <meta
-      name="twitter:description"
-      content={plainify(
-        description ? description : config.metadata.meta_description
-      )}
+      content={`${site.baseUrl}/${Astro.url.pathname.replace("/", "")}`}
     />
 
     <!-- og-image -->
     <meta
       property="og:image"
-      content={`${config.site.base_url}${
-        image ? image : config.metadata.meta_image
+      content={`${site.baseUrl}${
+        image ? image : site.meta.image
       }`}
     />
-
-    <!-- twitter-image -->
-    <meta
-      name="twitter:image"
-      content={`${config.site.base_url}${
-        image ? image : config.metadata.meta_image
-      }`}
-    />
-    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <Header />

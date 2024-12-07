@@ -1,0 +1,19 @@
+{
+  "copyright": "Designed And Developed by [Zeon Studio](https://zeon.studio)",
+  "baseUrl": "https://astroplate.netlify.app",
+  "basePath": "/",
+  "favicon": "/images/favicon.png",
+  "logo": {
+    "alt": "Applied Graphs",
+    "height": 30,
+    "src": "/images/logo.png",
+    "width": 150
+  },
+  "meta": {
+    "author": "Applied Graphs",
+    "description": "Applied Graphs",
+    "image": "/images/og-image.png"
+  },
+  "title": "Applied Graphs",
+  "trailing_slash": false
+}

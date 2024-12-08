@@ -11,6 +11,20 @@
 		"author": "Applied Graphs",
 		"description": "Applied Graphs"
 	},
+	"navigationLinks": [
+		{
+			"href": "/services",
+			"text": "Services"
+		},
+		{
+			"href": "/blog",
+			"text": "Blog"
+		},
+		{
+			"href": "/contact",
+			"text": "<span style=\"color: #ff6600; font-weight: bold !important;\">Hire Us</span>"
+		}
+	],
 	"title": "Applied Graphs",
 	"trailing_slash": false
 }

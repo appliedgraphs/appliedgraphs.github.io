@@ -4,7 +4,7 @@
 			"theme_color": {
 				"primary": "#121212",
 				"body": "#fff",
-				"border": "#1F394C",
+				"border": "#eaeaea",
 				"theme_light": "#f6f6f6",
 				"theme_dark": ""
 			},
@@ -17,9 +17,9 @@
 	},
 	"fonts": {
 		"font_family": {
-			"primary": "TeX Gyre Adventor:wght@400;700",
+			"primary": "TeX Gyre Adventor:wght@400;600",
 			"primary_type": "sans-serif",
-			"secondary": "Tex Gyre Adventor:wght@400;700",
+			"secondary": "Tex Gyre Adventor:wght@500;700",
 			"secondary_type": "sans-serif"
 		},
 		"font_size": {

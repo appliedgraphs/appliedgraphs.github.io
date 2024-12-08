@@ -1,0 +1,28 @@
+{
+	"banner": {
+		"title": "Applied Graphs",
+		"content": "Text explaining what Applied Graphs is",
+		"image": "/img/banner.png",
+		"button": {
+			"enable": true,
+			"label": "Contact us",
+			"link": "/contact"
+		}
+	},
+	"sections": [
+		{
+			"title": "We can help you",
+			"image": "/img/service-1.png",
+			"subsections": [
+				{
+					"text": "Our guidance helps you identify, hire, and train the people you need to succeed in leveraging semantic technologies effectively.",
+					"title": "Build the right team"
+				},
+				{
+					"text": "Develop your team's capabilities with an 18-month roadmap tailored for hiring and training in cutting-edge ontology and data management.",
+					"title": "Grow the skills you need"
+				}
+			]
+		}
+	]
+}

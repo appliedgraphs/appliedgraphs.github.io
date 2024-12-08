@@ -1,5 +1,5 @@
 {
-	"copyright": "Designed And Developed by [Zeon Studio](https://zeon.studio)",
+	"copyright": "&copy; 2024 Applied Graphs",
 	"baseUrl": "https://astroplate.netlify.app",
 	"basePath": "/",
 	"favicon": "/img/favicon.png",
@@ -11,8 +11,7 @@
 	},
 	"meta": {
 		"author": "Applied Graphs",
-		"description": "Applied Graphs",
-		"image": "/images/og-image.png"
+		"description": "Applied Graphs"
 	},
 	"title": "Applied Graphs",
 	"trailing_slash": false

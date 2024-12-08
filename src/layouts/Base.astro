@@ -25,7 +25,6 @@ if (theme.fonts.font_family.secondary) {
     .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;.]+/gi, "");
 }
 
-// types for frontmatters
 export interface Props {
   title?: string;
   meta_title?: string;
@@ -35,7 +34,6 @@ export interface Props {
   canonical?: string;
 }
 
-// destructure frontmatter
 const { title, meta_title, description, image, noindex, canonical } =
   Astro.props;
 ---
@@ -44,20 +42,7 @@ const { title, meta_title, description, image, noindex, canonical } =
 <html lang="en">
   <head>
     <!-- favicon -->
-    <link rel="shortcut icon" href={siteConfig.favicon} />
-    <!-- theme meta -->
-    <meta name="theme-name" content="astroplate" />
-    <meta name="msapplication-TileColor" content="#000000" />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: light)"
-      content="#fff"
-    />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: dark)"
-      content="#000"
-    />
+    <link rel="shortcut icon" href={siteConfig.favicon} type="image/svg+xml" />
     <meta name="generator" content={Astro.generator} />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 

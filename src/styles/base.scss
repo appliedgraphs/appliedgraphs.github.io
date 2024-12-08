@@ -1,9 +1,37 @@
+@font-face {
+  font-family: TeX Gyre Adventor;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/texgyreadventor-regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: TeX Gyre Adventor;
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/texgyreadventor-bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: TeX Gyre Adventor;
+  font-style: italic;
+  font-weight: 400;
+  src: url(/fonts/texgyreadventor-italic.woff) format("woff");
+}
+
+@font-face {
+  font-family: TeX Gyre Adventor;
+  font-style: italic;
+  font-weight: 700;
+  src: url(/fonts/texgyreadventor-bolditalic.woff) format("woff");
+}
+
 html {
   @apply text-base-sm md:text-base;
 }
 
 body {
-  @apply bg-body dark:bg-darkmode-body font-primary font-normal leading-relaxed text-text dark:text-darkmode-text;
+  @apply bg-body font-primary font-normal leading-relaxed text-text;
 }
 
 h1,
@@ -12,7 +40,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-secondary font-bold leading-tight text-dark dark:text-darkmode-dark;
+  @apply font-secondary font-bold leading-tight text-dark;
 }
 
 h1,
@@ -54,6 +82,6 @@ code {
   @apply after:border-none;
 }
 
-blockquote > p {
+blockquote>p {
   @apply my-0 #{!important};
 }

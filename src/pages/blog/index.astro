@@ -8,7 +8,8 @@ import Layout from "@/layouts/Layout.astro";
 import { sortByDate } from "@/lib/utilities";
 import { getSinglePage } from "@/lib/utilities/getSinglePage.astro";
 
-const postIndex = await getEntry("blog", "-index");
+// biome-ignore lint/style/noNonNullAssertion: <explanation>
+const postIndex = (await getEntry("blog", "-index"))!;
 const posts = await getSinglePage("blog");
 const sortedPosts = sortByDate(posts);
 const totalPages: number = Math.ceil(posts.length / blogConfig.postsPerPage);

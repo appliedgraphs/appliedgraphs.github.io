@@ -1,0 +1,41 @@
+---
+import Banner from "@/components/Banner.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import content from "@/content/services.json";
+import Layout from "@/layouts/Layout.astro";
+import { markdownify } from "@/lib/utilities";
+
+const { banner, sections } = content;
+---
+
+<Layout title="Services">
+    <Banner {...banner} />
+
+    {
+        sections.map((section) => (
+            <section class="section-sm">
+                <div class="container">
+                    <div class="row justify-center">
+                        <div class="text-center md:col-10 lg:col-7">
+                            {section.image && (
+                                <ImageMod
+                                    class="mx-auto mb-6 rounded-lg"
+                                    src={section.image.src}
+                                    width={200}
+                                    height={200}
+                                    alt={section.image.alt}
+                                    format="webp"
+                                />
+                            )}
+                            <h3
+                                set:html={markdownify(section.heading)}
+                                class="h3"
+                            />
+                            <div class="content">{section.text}</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        ))
+    }
+</Layout>

@@ -29,13 +29,11 @@ export interface Props {
   title?: string;
   meta_title?: string;
   description?: string;
-  image?: string;
   noindex?: boolean;
   canonical?: string;
 }
 
-const { title, meta_title, description, image, noindex, canonical } =
-  Astro.props;
+const { title, meta_title, description, noindex, canonical } = Astro.props;
 ---
 
 <!doctype html>
@@ -121,10 +119,10 @@ const { title, meta_title, description, image, noindex, canonical } =
     />
 
     <!-- og-image -->
-    <meta
+    <!-- <meta
       property="og:image"
       content={`${siteConfig.baseUrl}${image ? image : siteConfig.meta.image}`}
-    />
+    /> -->
   </head>
   <body>
     <Header />

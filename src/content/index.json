@@ -1,13 +1,15 @@
 {
 	"banner": {
-		"title": "From confusion to clarity",
-		"content": "Text explaining what Applied Graphs is",
-		"image": "/img/banner.png",
 		"button": {
-			"enable": true,
-			"label": "Contact us",
-			"link": "/contact"
-		}
+			"href": "/contact",
+			"text": "Contact us"
+		},
+		"heading": "From confusion to clarity",
+		"image": {
+			"alt": "Banner",
+			"src": "/img/banner.png"
+		},
+		"text": "Text explaining what Applied Graphs is"
 	},
 	"sections": [
 		{
@@ -18,11 +20,11 @@
 			"subsections": [
 				{
 					"text": "Our guidance helps you identify, hire, and train the people you need to succeed in leveraging semantic technologies effectively.",
-					"title": "Build the right team"
+					"heading": "Build the right team"
 				},
 				{
 					"text": "Develop your team's capabilities with an 18-month roadmap tailored for hiring and training in cutting-edge ontology and data management.",
-					"title": "Grow the skills you need"
+					"heading": "Grow the skills you need"
 				}
 			]
 		},
@@ -34,7 +36,7 @@
 			"subsections": [
 				{
 					"text": "Our guidance helps you identify, hire, and train the people you need to succeed in leveraging semantic technologies effectively.",
-					"title": "Ready to get started?"
+					"heading": "Ready to get started?"
 				}
 			]
 		}

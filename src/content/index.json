@@ -14,8 +14,8 @@
 	"sections": [
 		{
 			"image": {
-				"alt": "Service 1",
-				"src": "/img/service-1.png"
+				"alt": "People",
+				"src": "/img/people.png"
 			},
 			"subsections": [
 				{
@@ -25,6 +25,38 @@
 				{
 					"text": "Develop your team's capabilities with an 18-month roadmap tailored for hiring and training in cutting-edge ontology and data management.",
 					"heading": "Grow the skills you need"
+				}
+			]
+		},
+		{
+			"image": {
+				"alt": "Processes",
+				"src": "/img/processes.png"
+			},
+			"subsections": [
+				{
+					"text": "Our guidance helps you identify, hire, and train the people you need to succeed in leveraging semantic technologies effectively.",
+					"heading": "Manage your data like a pro"
+				},
+				{
+					"text": "Develop your team's capabilities with an 18-month roadmap tailored for hiring and training in cutting-edge ontology and data management.",
+					"heading": "Build models that deliver value"
+				}
+			]
+		},
+		{
+			"image": {
+				"alt": "Tools",
+				"src": "/img/tools.png"
+			},
+			"subsections": [
+				{
+					"text": "Our guidance helps you identify, hire, and train the people you need to succeed in leveraging semantic technologies effectively.",
+					"heading": "Get the most out of your tools"
+				},
+				{
+					"text": "Develop your team's capabilities with an 18-month roadmap tailored for hiring and training in cutting-edge ontology and data management.",
+					"heading": "Say what you mean"
 				}
 			]
 		},

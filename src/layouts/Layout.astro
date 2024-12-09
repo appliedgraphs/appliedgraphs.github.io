@@ -27,13 +27,12 @@ if (theme.fonts.font_family.secondary) {
 
 export interface Props {
   title?: string;
-  meta_title?: string;
   description?: string;
   noindex?: boolean;
   canonical?: string;
 }
 
-const { title, meta_title, description, noindex, canonical } = Astro.props;
+const { title, description, noindex, canonical } = Astro.props;
 ---
 
 <!doctype html>
@@ -76,7 +75,7 @@ const { title, meta_title, description, noindex, canonical } = Astro.props;
 
     <!-- title -->
     <title>
-      {plainify(meta_title ? meta_title : title ? title : siteConfig.title)}
+      {plainify(title ? `${siteConfig.title}: ${title}` : siteConfig.title)}
     </title>
 
     <!-- canonical url -->
@@ -101,7 +100,7 @@ const { title, meta_title, description, noindex, canonical } = Astro.props;
     <meta
       property="og:title"
       content={plainify(
-        meta_title ? meta_title : title ? title : siteConfig.title,
+        title ? `${siteConfig.title}: ${title}` : siteConfig.title,
       )}
     />
 

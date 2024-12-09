@@ -1,16 +1,13 @@
 ---
 import ImageMod from "@/components/ImageMod.astro";
 import content from "@/content/index.json";
-import Base from "@/layouts/Base.astro";
+import Layout from "@/layouts/Layout.astro";
 import { markdownify } from "@/lib/utilities";
-// import CallToAction from "@/partials/CallToAction.astro";
-// import Testimonial from "@/partials/Testimonial.astro";
-// import type { Button, Feature } from "@/types";
 
 const { banner, sections } = content;
 ---
 
-<Base>
+<Layout>
   <!-- Banner -->
   <section class="section pt-14">
     <div class="container">
@@ -89,7 +86,4 @@ const { banner, sections } = content;
       </section>
     ))
   }
-  <!-- /Features -->
-  <!-- <Testimonial testimonial={testimonial} />
-  <CallToAction call_to_action={call_to_action} /> -->
-</Base>
+</Layout>

@@ -40,9 +40,7 @@ const { pathname } = Astro.url;
               <a
                 href={navigationLink.href}
                 class={`nav-link block ${
-                  (pathname === `${navigationLink.href}/` ||
-                    pathname === navigationLink.href) &&
-                  "active"
+                  pathname.startsWith(navigationLink.href) ? "active" : ""
                 }`}
               >
                 <span set:html={navigationLink.text} />

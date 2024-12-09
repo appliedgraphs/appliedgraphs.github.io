@@ -24,7 +24,7 @@ const currentPosts = sortedPosts.slice(0, blogConfig.postsPerPage);
         {
           currentPosts.map((post) => (
             <div class="mb-14 md:col-6">
-              <BlogPostCard data={post} />
+              <BlogPostCard {...post} />
             </div>
           ))
         }

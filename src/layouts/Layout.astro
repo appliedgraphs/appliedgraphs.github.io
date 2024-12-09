@@ -26,10 +26,10 @@ if (theme.fonts.font_family.secondary) {
 }
 
 export interface Props {
-  title?: string;
+  canonical?: string;
   description?: string;
   noindex?: boolean;
-  canonical?: string;
+  title: string;
 }
 
 const { title, description, noindex, canonical } = Astro.props;

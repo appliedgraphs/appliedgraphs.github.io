@@ -1,9 +1,23 @@
 ---
 import { plainify } from "@/lib/utilities";
+import { formatDate } from "@/lib/utilities/formatDate";
 import ImageMod from "./ImageMod.astro";
 
-const { data } = Astro.props;
-const { title, image } = data.data;
+interface Props {
+  body: string;
+  data: {
+    date: Date;
+    image: string;
+    title: string;
+  };
+  slug: string;
+}
+
+const {
+  body,
+  data: { date, image, title },
+  slug,
+} = Astro.props;
 ---
 
 <div class="bg-body dark:bg-darkmode-body">
@@ -20,12 +34,15 @@ const { title, image } = data.data;
     )
   }
   <h4 class="mb-3">
-    <a href={`/blog/post/${data.slug}`}>
+    <a href={`/blog/post/${slug}`}>
       {title}
     </a>
   </h4>
-  <p class="mb-6">{plainify(data.body?.slice(0, 200))}</p>
-  <a class="btn btn-outline-primary btn-sm" href={`/blog/${data.slug}`}>
+  <ul class="mb-4">
+    <li class="inline-block">{formatDate(date)}</li>
+  </ul>
+  <p class="mb-6">{plainify(body.slice(0, 200))}</p>
+  <a class="btn btn-outline-primary btn-sm" href={`/blog/${slug}`}>
     read more
   </a>
 </div>

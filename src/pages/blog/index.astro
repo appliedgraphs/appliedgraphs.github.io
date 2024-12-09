@@ -1,0 +1,39 @@
+---
+import { getEntry } from "astro:content";
+import BlogPostCard from "@/components/BlogPostCard.astro";
+import PageHeading from "@/components/PageHeading.astro";
+import Pagination from "@/components/Pagination.astro";
+import blogConfig from "@/config/blog.json";
+import Layout from "@/layouts/Layout.astro";
+import { sortByDate } from "@/lib/utilities";
+import { getSinglePage } from "@/lib/utilities/getSinglePage.astro";
+
+const postIndex = await getEntry("blog", "-index");
+const posts = await getSinglePage("blog");
+const sortedPosts = sortByDate(posts);
+const totalPages: number = Math.ceil(posts.length / blogConfig.postsPerPage);
+const currentPosts = sortedPosts.slice(0, blogConfig.postsPerPage);
+---
+
+<Layout
+  description={postIndex.data.description}
+  meta_title={postIndex.data.meta_title}
+  title={postIndex.data.title}
+>
+  <PageHeading text={postIndex.data.title} />
+  <section class="section">
+    <div class="container">
+      <div class="row gx-5">
+        <!-- blog posts -->
+        {
+          currentPosts.map((post) => (
+            <div class="mb-14 md:col-6">
+              <BlogPostCard data={post} />
+            </div>
+          ))
+        }
+      </div>
+      <Pagination section="blog" currentPage={1} totalPages={totalPages} />
+    </div>
+  </section>
+</Layout>

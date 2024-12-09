@@ -1,12 +1,5 @@
 {
-	"banner": {
-		"heading": "Our services",
-		"image": {
-			"alt": "Banner",
-			"src": "/img/banner.png"
-		},
-		"text": "Overview of our services"
-	},
+	"heading": "Our services",
 	"sections": [
 		{
 			"image": {

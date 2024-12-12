@@ -1,3 +1,7 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
 [tool.poetry]
 name = "graph"
 version = "0.1.0"
@@ -9,7 +13,5 @@ readme = "README.md"
 python = "^3.13"
 networkx = {extras = ["default", "extra"], version = "^3.4.2"}
 
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.poetry.scripts]
+generate-svg = "graph.scripts.generate_svg:main"

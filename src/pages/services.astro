@@ -17,18 +17,17 @@ const { heading, sections } = content;
                 class={`section-sm ${sectionIndex % 2 !== 0 && "bg-gradient"}`}
             >
                 <div class="container">
-                    <div class="flex flex-col justify-center text-center">
+                    <div class="flex flex-col items-center">
                         <h3
                             set:html={markdownify(section.heading)}
                             class="h3"
                         />
                         {section.image && (
-                            <ImageMod
+                            <img
                                 alt={section.image.alt}
                                 class="md:mt-6 rounded-lg"
-                                height={section.image.height}
-                                width={section.image.width}
                                 src={section.image.src}
+                                style={{ maxWidth: "100%" }}
                             />
                         )}
                         {section.text && (

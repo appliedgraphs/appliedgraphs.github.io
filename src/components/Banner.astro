@@ -47,12 +47,7 @@ const { button, heading, image, text } = Astro.props;
             {
                 image && (
                     <div class="col-12">
-                        <ImageMod
-                            src={image.src}
-                            height={380}
-                            width={1200}
-                            alt={image.alt}
-                        />
+                        <img alt={image.alt} src={image.src} />
                     </div>
                 )
             }

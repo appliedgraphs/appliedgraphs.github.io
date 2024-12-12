@@ -12,27 +12,58 @@ const { heading, sections } = content;
     <PageHeading text={heading} />
 
     {
-        sections.map((section) => (
-            <section class="section-sm">
+        sections.map((section, sectionIndex) => (
+            <section
+                class={`section-sm ${sectionIndex % 2 !== 0 && "bg-gradient"}`}
+            >
                 <div class="container">
-                    <div class="row justify-center">
-                        <div class="text-center md:col-10 lg:col-7">
-                            {section.image && (
-                                <ImageMod
-                                    class="mx-auto mb-6 rounded-lg"
-                                    src={section.image.src}
-                                    width={200}
-                                    height={200}
-                                    alt={section.image.alt}
-                                    format="webp"
-                                />
-                            )}
-                            <h3
-                                set:html={markdownify(section.heading)}
-                                class="h3"
+                    <div class="flex flex-col justify-center text-center">
+                        <h3
+                            set:html={markdownify(section.heading)}
+                            class="h3"
+                        />
+                        {section.image && (
+                            <ImageMod
+                                alt={section.image.alt}
+                                class="md:mt-6 rounded-lg"
+                                height={section.image.height}
+                                width={section.image.width}
+                                src={section.image.src}
                             />
-                            <div class="content">{section.text}</div>
-                        </div>
+                        )}
+                        {section.text && (
+                            <div class="content md:mt-6">
+                                {markdownify(section.text)}
+                            </div>
+                        )}
+                        {section.services && (
+                            <div class="row items-center justify-between md:mt-6">
+                                {section.services.map((service) => (
+                                    <div class="md:col-3">
+                                        <div class="flex flex-col md:gap-4">
+                                            <ImageMod
+                                                alt={service.image.alt}
+                                                class="rounded"
+                                                height={400}
+                                                width={400}
+                                                src={service.image.src}
+                                            />
+                                            <h4
+                                                set:html={markdownify(
+                                                    service.heading,
+                                                )}
+                                            />
+                                            <p
+                                                set:html={markdownify(
+                                                    service.text,
+                                                )}
+                                                class="text-sm"
+                                            />
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
             </section>

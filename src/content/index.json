@@ -9,9 +9,25 @@
 			"alt": "Banner",
 			"src": "/img/banner.png"
 		},
-		"text": "Text explaining what Applied Graphs is"
+		"text": "Connecting data, mapping meaning, ensuring success."
 	},
 	"sections": [
+		{
+			"image": {
+				"alt": "Processes",
+				"src": "/img/processes.png"
+			},
+			"subsections": [
+				{
+					"text": "Good data management is about more than storage—it’s about unlocking value. Our approach simplifies the process, transforming messy data into meaningful insights that drive informed decisions.",
+					"heading": "Manage your data like a pro"
+				},
+				{
+					"text": "Delivering value with models means thinking beyond theory. We work with you to design practical, results-driven models that bridge the gap between data and decision-making.",
+					"heading": "Build models that deliver value"
+				}
+			]
+		},
 		{
 			"image": {
 				"alt": "People",
@@ -28,22 +44,7 @@
 				}
 			]
 		},
-		{
-			"image": {
-				"alt": "Processes",
-				"src": "/img/processes.png"
-			},
-			"subsections": [
-				{
-					"text": "Our guidance helps you identify, hire, and train the people you need to succeed in leveraging semantic technologies effectively.",
-					"heading": "Manage your data like a pro"
-				},
-				{
-					"text": "Develop your team's capabilities with an 18-month roadmap tailored for hiring and training in cutting-edge ontology and data management.",
-					"heading": "Build models that deliver value"
-				}
-			]
-		},
+		
 		{
 			"image": {
 				"alt": "Tools",
@@ -51,11 +52,11 @@
 			},
 			"subsections": [
 				{
-					"text": "Our guidance helps you identify, hire, and train the people you need to succeed in leveraging semantic technologies effectively.",
+					"text": "The right tools can make all the difference—but only if you know how to use them. From graph databases to terminology management systems, we help you leverage advanced technologies to empower your customers.",
 					"heading": "Get the most out of your tools"
 				},
 				{
-					"text": "Develop your team's capabilities with an 18-month roadmap tailored for hiring and training in cutting-edge ontology and data management.",
+					"text": "Precision matters when it comes to data. We work with you to assemble a trusted collection of standards and ontologies, building a foundation that aligns your data with your goals. The right terminologies do more than define—they drive solutions.",
 					"heading": "Say what you mean"
 				}
 			]
@@ -67,7 +68,7 @@
 			},
 			"subsections": [
 				{
-					"text": "Our guidance helps you identify, hire, and train the people you need to succeed in leveraging semantic technologies effectively.",
+					"text": "Wherever you are in your journey, Applied Graphs brings the expertise to help you move forward with confidence. Let’s build something remarkable together—contact us today.",
 					"heading": "Ready to get started?"
 				}
 			]

@@ -14,7 +14,7 @@ const { heading, sections } = content;
     {
         sections.map((section, sectionIndex) => (
             <section
-                class={`section-sm ${sectionIndex % 2 !== 0 && "bg-gradient"}`}
+                class={`section-sm ${sectionIndex % 2 === 0 && "bg-gradient"}`}
             >
                 <div class="container">
                     <div class="flex flex-col items-center">

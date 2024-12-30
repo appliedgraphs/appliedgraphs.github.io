@@ -8,7 +8,6 @@ import Layout from "@/layouts/Layout.astro";
 import { sortByDate } from "@/lib/utilities";
 import { getSinglePage } from "@/lib/utilities/getSinglePage.astro";
 
-// biome-ignore lint/style/noNonNullAssertion: <explanation>
 const postIndex = (await getEntry("blog", "-index"))!;
 const posts = await getSinglePage("blog");
 const sortedPosts = sortByDate(posts);
@@ -17,7 +16,7 @@ const currentPosts = sortedPosts.slice(0, blogConfig.postsPerPage);
 ---
 
 <Layout description={postIndex.data.description} title={postIndex.data.title}>
-  <PageHeading text={postIndex.data.title} />
+  <PageHeading title={postIndex.data.title} />
   <section class="section">
     <div class="container">
       <div class="row gx-5">

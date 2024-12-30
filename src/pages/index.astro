@@ -1,15 +1,16 @@
 ---
 import Banner from "@/components/Banner.astro";
 import ImageMod from "@/components/ImageMod.astro";
+import PageHeading from "@/components/PageHeading.astro";
 import content from "@/content/index.json";
 import Layout from "@/layouts/Layout.astro";
 import { markdownify } from "@/lib/utilities";
 
-const { banner, sections } = content;
+const { heading, sections } = content;
 ---
 
 <Layout title="">
-  <Banner {...banner} />
+  <PageHeading {...heading} />
 
   <!-- Sections -->
   {

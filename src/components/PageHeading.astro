@@ -1,19 +1,48 @@
 ---
-import { humanize } from "@/lib/utilities";
+import { markdownify } from "@/lib/utilities";
 
 interface Props {
-  text: string;
+  button?: {
+    href: string;
+    text: string;
+  };
+  image?: {
+    alt: string;
+    src: string;
+  };
+  subtitle?: string;
+  title: string;
 }
 
-const { text } = Astro.props;
+const { button, image, subtitle, title } = Astro.props;
 ---
 
-<section>
-  <div class="container text-center">
-    <div
-      class="rounded-2xl bg-gradient-to-b from-body to-theme-light px-8 py-14 dark:from-darkmode-body dark:to-darkmode-theme-light"
-    >
-      <h1 set:text={humanize(text)} />
+<section class={`section ${image ? "py-14" : "pb-0 pt-14"}`}>
+  <div class="container">
+    <div class="row justify-center">
+      <div class="lg:col-7 md:col-9 text-center">
+        <h1 set:html={markdownify(title)} class="text-h3 lg:text-h1" />
+        {subtitle && <p set:html={markdownify(subtitle)} class="mt-4" />}
+        {
+          button && (
+            <a
+              class="btn btn-primary mt-8"
+              href={button.href}
+              target={button.href.startsWith("http") ? "_blank" : "_self"}
+              rel="noopener"
+            >
+              {button.text}
+            </a>
+          )
+        }
+      </div>
+      {
+        image && (
+          <div class="col-12 my-8">
+            <img alt={image.alt} src={image.src} />
+          </div>
+        )
+      }
     </div>
   </div>
 </section>

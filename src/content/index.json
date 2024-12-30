@@ -1,15 +1,15 @@
 {
-	"banner": {
+	"heading": {
 		"button": {
 			"href": "/contact",
 			"text": "Contact us"
 		},
-		"heading": "From confusion to clarity",
 		"image": {
 			"alt": "Banner",
 			"src": "/img/banner.png"
 		},
-		"text": "Connecting data, mapping meaning, ensuring success."
+		"subtitle": "Connecting data, mapping meaning, ensuring success.",
+		"title": "From confusion to clarity"
 	},
 	"sections": [
 		{

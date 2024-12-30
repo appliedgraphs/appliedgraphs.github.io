@@ -9,7 +9,7 @@ const { heading, sections } = content;
 ---
 
 <Layout title="Services">
-    <PageHeading text={heading} />
+    <PageHeading {...heading} />
 
     {
         sections.map((section, sectionIndex) => (

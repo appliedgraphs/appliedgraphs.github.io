@@ -1,5 +1,11 @@
 {
-	"heading": "Services",
+	"heading": {
+		"image": {
+			"alt": "Banner",
+			"src": "/img/placeholder.png"
+		},
+		"title": "Services"
+	},
 	"sections": [
 		{
 			"heading": "Our approach",

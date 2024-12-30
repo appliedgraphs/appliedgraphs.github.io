@@ -1,0 +1,58 @@
+---
+import PageHeading from "@/components/PageHeading.astro";
+import content from "@/content/contact.json";
+import Layout from "@/layouts/Layout.astro";
+
+const { heading, image } = content;
+---
+
+<Layout title="Contact">
+    <PageHeading {...heading} />
+
+    <section class="section-sm">
+        <div class="container">
+            <div class="flex flex-row justify-center">
+                <form class="flex flex-col mx-14" style={{ minWidth: "32rem" }}>
+                    <div class="mb-8">
+                        <label for="name" class="form-label">
+                            Full Name <span class="text-red-500">*</span>
+                        </label>
+                        <input
+                            id="name"
+                            name="name"
+                            class="form-input"
+                            placeholder="John Doe"
+                            type="text"
+                        />
+                    </div>
+                    <div class="mb-8">
+                        <label for="email" class="form-label">
+                            Working Mail <span class="text-red-500">*</span>
+                        </label>
+                        <input
+                            id="email"
+                            name="email"
+                            class="form-input"
+                            placeholder="john.doe@email.com"
+                            type="email"
+                        />
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="form-label">
+                            Anything else? <span class="text-red-500">*</span>
+                        </label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            class="form-input"
+                            placeholder="Message goes here..."
+                            rows="8"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button
+                    >
+                </form>
+                <img class="mx-14" {...image} />
+            </div>
+        </div>
+    </section>
+</Layout>

@@ -30,15 +30,38 @@ const { heading, sections } = content;
             <div
               class={`md:col-7 lg:col-6 ${sectionIndex % 2 !== 0 && "md:order-1"}`}
             >
-              {section.subsections.map((subsection) => (
-                <div class="container">
-                  <h2 set:html={markdownify(subsection.heading)} class="mb-4" />
-                  <p
-                    set:html={markdownify(subsection.text)}
-                    class="mb-8 text-lg"
-                  />
+              <div class="flex flex-col gap-4">
+                {section.subsections.map((subsection, subsectionI) => (
+                  <div class="container">
+                    {subsection.heading && (
+                      <h2
+                        set:html={markdownify(subsection.heading)}
+                        class={`mb-4 ${subsectionI > 0 ? "h4" : ""}`}
+                      />
+                    )}
+                    <p
+                      class="text-lg"
+                      set:html={markdownify(subsection.text)}
+                    />
+                  </div>
+                ))}
+              </div>
+              {section.button && (
+                <div class="container flex flex-row justify-start">
+                  <a
+                    class="btn btn-lg btn-primary mt-8"
+                    href={section.button.href}
+                    target={
+                      section.button.href.startsWith("http")
+                        ? "_blank"
+                        : "_self"
+                    }
+                    rel="noopener"
+                  >
+                    {section.button.text}
+                  </a>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </div>

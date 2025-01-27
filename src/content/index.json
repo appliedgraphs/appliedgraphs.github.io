@@ -19,12 +19,14 @@
 			},
 			"subsections": [
 				{
-					"text": "Good data management is about more than storage—it's about unlocking value. Our approach simplifies the process, transforming messy data into meaningful insights that drive informed decisions.",
-					"heading": "Manage your data like a pro"
+					"heading": "Get more value from data",
+					"text": "Improve the **findability**, **accessibility**, **interoperability**, and **reuse** of your data, following the [FAIR Principles](https://www.go-fair.org/fair-principles/)."
 				},
 				{
-					"text": "Delivering value with models means thinking beyond theory. We work with you to design practical, results-driven models that bridge the gap between data and decision-making.",
-					"heading": "Build models that deliver value"
+					"text": "Model data using **ontologies** and store them in **knowledge graphs** to unlock relationship-centric views."
+				},
+				{
+					"text": "**Extract** structured data from unstructured documents using cutting-edge Artifical Intelligence."
 				}
 			]
 		},
@@ -35,12 +37,12 @@
 			},
 			"subsections": [
 				{
-					"text": "Our guidance helps you identify, hire, and train the people you need to succeed in leveraging semantic technologies effectively.",
-					"heading": "Build the right team"
+					"heading": "Build the right team",
+					"text": "Identify, hire, and train the people you need to successfully leverage semantic technologies."
 				},
 				{
-					"text": "Develop your team's capabilities with an 18-month roadmap tailored for hiring and training in cutting-edge ontology and data management.",
-					"heading": "Grow the skills you need"
+					"heading": "... with the right skills",
+					"text": "Expand your existing team's capabilities with a training program tailored to your organization."
 				}
 			]
 		},
@@ -52,24 +54,24 @@
 			},
 			"subsections": [
 				{
-					"text": "The right tools can make all the difference—but only if you know how to use them. From graph databases to terminology management systems, we help you leverage advanced technologies to empower your customers.",
-					"heading": "Get the most out of your tools"
-				},
-				{
-					"text": "Precision matters when it comes to data. We work with you to assemble a trusted collection of standards and ontologies, building a foundation that aligns your data with your goals. The right terminologies do more than define—they drive solutions.",
-					"heading": "Say what you mean"
+					"text": "The right tools can make all the difference — but only if you know how to use them. From graph databases to retrieval-augmented generation, we'll help you choose and develop the right technologies to empower your team and deliver value to your customers.",
+					"heading": "Get more value from software"
 				}
 			]
 		},
 		{
+			"button": {
+				"href": "/contact",
+				"text": "Contact us"
+			},
 			"image": {
 				"alt": "Contact",
 				"src": "/img/contact.png"
 			},
 			"subsections": [
 				{
-					"text": "Wherever you are in your journey, Applied Graphs brings the expertise to help you move forward with confidence. Let's build something remarkable together—contact us today.",
-					"heading": "Ready to get started?"
+					"heading": "Ready to get started?",
+					"text": "Wherever you are in your journey, Applied Graphs brings the expertise to help you move forward with confidence. Let's build something remarkable together."
 				}
 			]
 		}

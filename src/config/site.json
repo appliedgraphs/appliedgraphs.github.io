@@ -17,10 +17,6 @@
 			"text": "Services"
 		},
 		{
-			"href": "/blog",
-			"text": "Blog"
-		},
-		{
 			"href": "/contact",
 			"text": "<span style=\"color: #ff6600; font-weight: bold !important;\">Hire Us</span>"
 		}

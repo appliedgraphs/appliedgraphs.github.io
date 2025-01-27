@@ -34,9 +34,9 @@ const { button, image, text, title } = Astro.props;
     </div>
     {
       text && (
-        <div class="row justify-center">
+        <div class="row justify-center mt-8">
           <div class="lg:col-10">
-            <div class="flex flex-col gap-8 mt-4">
+            <div class="flex flex-col gap-8">
               {text.sections.map((section) => (
                 <div>
                   {section.heading && (
@@ -55,10 +55,10 @@ const { button, image, text, title } = Astro.props;
     }
     {
       button && (
-        <div class="row justify-center">
+        <div class="row justify-center mt-8">
           <div class="text-center">
             <a
-              class="btn btn-lg btn-primary mt-8"
+              class="btn btn-lg btn-primary"
               href={button.href}
               target={button.href.startsWith("http") ? "_blank" : "_self"}
               rel="noopener"
@@ -71,9 +71,9 @@ const { button, image, text, title } = Astro.props;
     }
     {
       image && (
-        <div class="row justify-center">
-          <div class="col-12 my-8 flex justify-center">
-            <img class="max-w-4xl" alt={image.alt} src={image.src} />
+        <div class="row justify-center my-8">
+          <div class="col-12 flex justify-center">
+            <img class="max-w-2xl" alt={image.alt} src={image.src} />
           </div>
         </div>
       )

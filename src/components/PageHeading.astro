@@ -10,11 +10,16 @@ interface Props {
     alt: string;
     src: string;
   };
-  subtitle?: string;
+  text?: {
+    sections: {
+      heading: string;
+      text: string;
+    }[];
+  };
   title: string;
 }
 
-const { button, image, subtitle, title } = Astro.props;
+const { button, image, text, title } = Astro.props;
 ---
 
 <section class={`section ${image ? "py-14" : "pb-0 pt-14"}`}>
@@ -23,8 +28,23 @@ const { button, image, subtitle, title } = Astro.props;
       <div class="lg:col-8 md:col-10 text-center">
         <h1 set:html={markdownify(title)} class="text-h3 lg:text-h1" />
         {
-          subtitle && (
-            <div set:html={markdownify(subtitle, true)} class="mt-4" />
+          text && (
+            <div class="flex flex-col gap-8 mt-4">
+              {text.sections.map((section) => (
+                <div>
+                  {section.heading && (
+                    <h2
+                      class="text-h6"
+                      set:html={markdownify(section.heading)}
+                    />
+                  )}
+                  <p
+                    class="-indent-4 text-lg"
+                    set:html={markdownify(section.text)}
+                  />
+                </div>
+              ))}
+            </div>
           )
         }
         {

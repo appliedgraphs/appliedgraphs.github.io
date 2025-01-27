@@ -8,7 +8,22 @@
 			"alt": "Banner",
 			"src": "/img/banner.png"
 		},
-		"subtitle": "<p class=\"mb-4\"><b>Your business succeeds or fails based on the knowledge you bring to it.</b><br/>In some cases, the knowledge is your product. In others, it's the secret sauce powering your business and empowering your customers. In either case, you wouldn't be where you are without the insights you've won over many years.</p><p class=\"mb-4\"><b>The way you manage data should reflect that.</b><br/>But it rarely does. Where the business is aligned, the data are siloed. Where the vision is clear, the data foggy.</p><p><b>We're here to help.</b><br/>At Applied Graphs we've seen that data are often the most neglected resources in any organization. We aim to change by helping you get more value from your data and the software that uses them.",
+		"text": {
+			"sections": [
+				{
+					"heading": "Your business succeeds or fails based on the knowledge you bring to it.",
+					"text": "In some cases, the knowledge is your product. In others, it's the secret sauce powering your business and empowering your customers. In either case, you wouldn't be where you are without the insights you've won over many years."
+				},
+				{
+					"heading": "The way you manage data should reflect that.",
+					"text": "But it rarely does. Where the business is aligned, the data are siloed. Where the vision is clear, the data are foggy."
+				},
+				{
+					"heading": "We're here to help.",
+					"text": "At Applied Graphs we've seen that data are often the most neglected resources in any organization. We aim to change by helping you get more value from your data and the software that uses them."
+				}
+			]
+		},
 		"title": "From confusion to clarity"
 	},
 	"sections": [

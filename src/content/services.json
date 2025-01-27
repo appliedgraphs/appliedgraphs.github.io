@@ -36,18 +36,6 @@
 					"text": "At Applied Graphs, we use advanced semantic technologies to help you organize and connect your data in meaningful ways. These specialized tools allow us to validate data quality, ensure compatibility with standards, and build systems that are both flexible and reliable. By leveraging the best tools available, we simplify complex problems and deliver solutions that are scalable, efficient, and tailored to your needs."
 				}
 			]
-		},
-		{
-			"heading": "Journey",
-			"image": {
-				"alt": "",
-				"src": "/img/services-graph.svg"
-			},
-			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-		},
-		{
-			"heading": "Wayfinding",
-			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 		}
 	]
 }

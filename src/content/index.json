@@ -8,7 +8,7 @@
 			"alt": "Banner",
 			"src": "/img/banner.png"
 		},
-		"subtitle": "Connecting data, mapping meaning, ensuring success.",
+		"subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 		"title": "From confusion to clarity"
 	},
 	"sections": [
@@ -19,7 +19,7 @@
 			},
 			"subsections": [
 				{
-					"text": "Good data management is about more than storage—it’s about unlocking value. Our approach simplifies the process, transforming messy data into meaningful insights that drive informed decisions.",
+					"text": "Good data management is about more than storage—it's about unlocking value. Our approach simplifies the process, transforming messy data into meaningful insights that drive informed decisions.",
 					"heading": "Manage your data like a pro"
 				},
 				{
@@ -44,7 +44,7 @@
 				}
 			]
 		},
-		
+
 		{
 			"image": {
 				"alt": "Tools",
@@ -68,7 +68,7 @@
 			},
 			"subsections": [
 				{
-					"text": "Wherever you are in your journey, Applied Graphs brings the expertise to help you move forward with confidence. Let’s build something remarkable together—contact us today.",
+					"text": "Wherever you are in your journey, Applied Graphs brings the expertise to help you move forward with confidence. Let's build something remarkable together—contact us today.",
 					"heading": "Ready to get started?"
 				}
 			]
